@@ -1,0 +1,5 @@
+SELECT SUM(koncert.brkarata) FROM koncert
+INNER JOIN izvedena ON koncert.idkonc = izvedena.idkonc
+INNER JOIN pesma ON izvedena.idpesme = pesma.idpesme
+INNER JOIN izvodjac ON izvodjac.idizv = izvedena.idizv
+WHERE izvodjac.naziv = "Chris Rea" AND pesma.naziv = "Auberge"
